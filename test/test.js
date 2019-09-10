@@ -1,6 +1,6 @@
 var should = require("should"),
     path = require("path"),
-    fs = require("fs"),
+    fs = require("memfs"),
     phantomjs = require("phantomjs"),
     phantomjs2 = require("phantomjs-prebuilt")
     tmpDir = path.join(__dirname, "temp"),
