@@ -11,7 +11,7 @@
 Yet another implementation of html to pdf conversion in node.js using phantomjs. This one differs from others in performance and scalability. Unlike others it allocates predefined number of phantomjs worker processes which are then managed and reused using FIFO strategy. This eliminates phantomjs process startup time and it also doesn't flood the system with dozens of phantomjs process under load.
 
 ```js
-var fs = require('fs')
+var fs = require("memfs")
 var conversion = require("phantom-html-to-pdf")();
 conversion({ html: "<h1>Hello World</h1>" }, function(err, pdf) {
   var output = fs.createWriteStream('/path/to/output.pdf')
